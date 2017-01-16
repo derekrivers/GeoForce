@@ -5,7 +5,7 @@ using MvvmCross.Droid.Views;
 
 namespace GeoForce.Android.Views
 {
-    [Activity(Label = "MainView", MainLauncher =true)]
+    [Activity(Label = "MainView")]
     public class MainView : MvxActivity<MainViewModel>
     {
         protected override void OnViewModelSet()

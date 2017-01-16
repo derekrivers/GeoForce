@@ -1,9 +1,7 @@
-﻿using MvvmCross.Core.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GeoForce.Core.Services;
+using GeoForce.Core.ViewModels;
+using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 
 namespace GeoForce.Core
 {
@@ -12,6 +10,10 @@ namespace GeoForce.Core
         public App()
         {
             //Register Ioc Dependencie && AppStart.
+
+            Mvx.ConstructAndRegisterSingleton<ILocationService, LocationService>();
+
+            Mvx.RegisterSingleton<IMvxAppStart>(new MvxAppStart<MainViewModel>());
         }
     }
 }

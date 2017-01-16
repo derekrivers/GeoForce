@@ -35,14 +35,15 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <Folder Include="Messages\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Messages\LocationMessage.cs" />
     <Compile Include="Plugins\Bootstrappers\LocationBootstrap.cs" />
     <Compile Include="Plugins\Bootstrappers\MessengerBootstrap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ILocationService.cs" />
+    <Compile Include="Services\LocationService.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
